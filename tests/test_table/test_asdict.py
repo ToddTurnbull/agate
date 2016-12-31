@@ -10,7 +10,7 @@ from agate.testcase import AgateTestCase
 from agate.data_types import *
 
 
-class TestDict(AgateTestCase):
+class TestAsdict(AgateTestCase):
     def setUp(self):
         self.rows = (
             (1, 'a', True, '11/4/2015', '11/4/2015 12:22 PM', '4:15'),
@@ -28,7 +28,7 @@ class TestDict(AgateTestCase):
 
         self.json_funcs = [c.jsonify for c in self.column_types]
 
-    def test_to_dict(self):
+    def test_asdict(self):
         table = Table(self.rows, self.column_names, self.column_types)
 
         d1 = table._asdict('text', column_funcs=self.json_funcs)
@@ -38,7 +38,7 @@ class TestDict(AgateTestCase):
 
         self.assertEqual(d1, d2)
 
-    def test_to_dict_func(self):
+    def test_asdict_func(self):
         table = Table(self.rows, self.column_names, self.column_types)
 
         key_func = lambda r: r['text']
