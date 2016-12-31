@@ -318,6 +318,7 @@ class Table(object):
 
 
 from agate.table.aggregate import aggregate
+from agate.table.asdict import asdict
 from agate.table.bar_chart import bar_chart
 from agate.table.bins import bins
 from agate.table.column_chart import column_chart
@@ -351,6 +352,7 @@ from agate.table.to_json import to_json
 from agate.table.where import where
 
 Table.aggregate = aggregate
+Table._asdict = asdict
 Table.bar_chart = bar_chart
 Table.bins = bins
 Table.column_chart = column_chart
