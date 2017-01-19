@@ -348,6 +348,7 @@ from agate.table.scatterplot import scatterplot
 from agate.table.select import select
 from agate.table.to_csv import to_csv
 from agate.table.to_json import to_json
+from agate.table.to_object import to_object
 from agate.table.where import where
 
 Table.aggregate = aggregate
@@ -381,4 +382,5 @@ Table.scatterplot = scatterplot
 Table.select = select
 Table.to_csv = to_csv
 Table.to_json = to_json
+Table.to_object = to_object
 Table.where = where
